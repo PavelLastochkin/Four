@@ -1,7 +1,8 @@
+require('dotenv').config()
 const app = require('express')()
 
-const host = '127.0.0.1'
-const port = 4000
+const host = process.env.HOST
+const port = process.env.PORT
 
   app.get('/', (req, res) => {
     res.status(200).type('text/plain')
