@@ -3,6 +3,13 @@ const app = require('express')()
 const host = '127.0.0.1'
 const port = 4000
 
+app.get('/home', (req, res) => {
+    res.status(200).type('text/plain')
+    res.send('Home page')
+  })
+
+  //DEV
+
   app.get('/', (req, res) => {
     res.status(200).type('text/plain')
     res.send('Home page')
